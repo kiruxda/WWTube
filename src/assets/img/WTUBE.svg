@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <g class="layer">
+  <title>Layer 1</title>
+  <rect fill="#FF0000" height="194" id="svg_3" rx="55" ry="55" stroke="#000000" transform="matrix(1 0 0 1 0 0)" width="309" x="17" y="129"/>
+  <text fill="#ffffff" font-family="Fantasy" font-size="24" id="svg_4" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(6.80633 0 0 3.99574 -717.602 -594.885)" x="130.21" xml:space="preserve" y="214.42">W</text>
+  <text fill="#ff0000" font-family="Fantasy" font-size="100" id="svg_6" stroke="#000000" stroke-width="0" text-anchor="middle" x="377" xml:space="preserve" y="263">W</text>
+  <text fill="#ffffff" font-family="Fantasy" font-size="100" id="svg_7" stroke="#000000" stroke-width="0" text-anchor="middle" x="521" xml:space="preserve" y="263">TUBE</text>
+ </g>
+</svg>
