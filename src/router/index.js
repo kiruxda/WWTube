@@ -16,8 +16,8 @@ const router = createRouter({
       meta: {template : 'MainLayout'}
     },
     {
-      path: '/channel',
-      name: 'channel',
+      path: '/channel/:id',
+      name: 'channel-info',
       component: ChannelView,
       meta: {template : 'MainLayout'}
     },
