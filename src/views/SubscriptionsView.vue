@@ -32,15 +32,15 @@
 </script>
 
 <template>
-    <main>
-        <div id = "content-subscriptions">
+
+        <div id = "content-main">
             <section class="section-video">
                 <div class="video-list" v-for="video in videos">
                     <Video :video></Video>
                 </div>
             </section>
         </div>
-    </main>
+
 </template>
 
   

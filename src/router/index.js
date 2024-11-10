@@ -12,32 +12,38 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {template : 'MainLayout'}
     },
     {
       path: '/channel',
       name: 'channel',
-      component: ChannelView
+      component: ChannelView,
+      meta: {template : 'MainLayout'}
     },
     {
       path: '/subscriptions',
       name: 'subscriptions',
-      component: SubscriptionsView
+      component: SubscriptionsView,
+      meta: {template : 'MainLayout'}
     },
     {
       path: '/video/:id',
       name: 'video-info',
-      component: VideoView
+      component: VideoView,
+      meta: {template : 'VideoLayout'}
     },
     {
       path: '/login',
       name: 'login',
-      component: LoginView
+      component: LoginView,
+      meta: {template : 'LoginLayout'}
     },
     {
       path: '/shorts',
       name: 'shorts',
-      component: ShortsView
+      component: ShortsView,
+      meta: {template : 'MainLayout'}
     },
   ]
 })

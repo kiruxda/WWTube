@@ -1,5 +1,5 @@
 <template>
-    <main>
+
         <div id = "content-channel">
             <div class="section-channel">
                 <img class="cover-img" src="">
@@ -33,5 +33,5 @@
                 </article>
             </section>
         </div>
-    </main>
+
 </template>

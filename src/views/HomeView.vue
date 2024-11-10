@@ -58,7 +58,6 @@
     ]
 </script>
 <template>
-    <main>
         <div id = "content-main">
             <section class="section-video">
                 <div class="video-list" v-for="video in videos">
@@ -66,5 +65,4 @@
                 </div>
             </section>
         </div>
-    </main>
 </template>
