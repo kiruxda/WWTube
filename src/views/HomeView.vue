@@ -1,9 +1,67 @@
+<script setup>
+    const videos =[
+        {
+            id:1,
+            name: 'малый эло',
+            thumbnail: '@/assets/img/rachel.jpg',
+            channel_name: 'кирюха',
+            channel_img: '@/assets/img/kiruxa.jpg',
+            views: '100k',
+            date: '1 week ago'
+        },
+        {
+            id:2,
+            name: 'второе видео',
+            thumbnail: '@/assets/img/rachel.jpg',
+            channel_name: 'крутой канал',
+            channel_img: '@/assets/img/kiruxa.jpg',
+            views: '100k',
+            date: '1 week ago'
+        },
+        {
+            id:3,
+            name: 'третье видео',
+            thumbnail: '@/assets/img/rachel.jpg',
+            channel_name: 'канал покруче',
+            channel_img: '@/assets/img/kiruxa.jpg',
+            views: '100k',
+            date: '1 week ago'
+        },
+        {
+            id:4,
+            name: 'видева',
+            thumbnail: '@/assets/img/rachel.jpg',
+            channel_name: 'самый умный',
+            channel_img: '@/assets/img/kiruxa.jpg',
+            views: '100k',
+            date: '1 week ago'
+        },
+        {
+            id:5,
+            name: 'видео',
+            thumbnail: '@/assets/img/rachel.jpg',
+            channel_name: 'самый смелый',
+            channel_img: '@/assets/img/kiruxa.jpg',
+            views: '100k',
+            date: '1 week ago'
+        },
+        {
+            id:6,
+            name: 'вау',
+            thumbnail: '@/assets/img/rachel.jpg',
+            channel_name: 'жестянчик',
+            channel_img: '@/assets/img/kiruxa.jpg',
+            views: '100k',
+            date: '1 week ago'
+        },
+    ]
+</script>
 <template>
     <main>
         <div id = "content">
             <section class="section-video">
-                <article class="container-video">
-                    <RouterLink to="/video" class="thumbnail">
+                <article class="container-video" v-for="video in videos">
+                    <RouterLink :to="{name: 'video-info', params: {id: video.id}}" class="thumbnail">
                         <img class="thumbnail-img" src="@/assets/img/rachel.jpg">
                     </RouterLink>
                     <div class="details-video">
@@ -11,11 +69,11 @@
                             <img src="@/assets/img/kiruxa.jpg">
                         </RouterLink>
                         <div class="about-video">
-                            <RouterLink to="/video" class="video-title-ref">малый эло</RouterLink>
-                            <RouterLink to="/channel" class="video-channel-ref">Кирюха</RouterLink>
+                            <RouterLink :to="{name:'video-info', params:{id: video.id}}" class="video-title-ref">{{ video.name }}</RouterLink>
+                            <RouterLink to="/channel" class="video-channel-ref">{{ video.channel_name }}</RouterLink>
                             <div class="data-video">
-                                <span>355K views</span>
-                                <span>1 week ago</span>
+                                <span>{{ video.views }}</span>
+                                <span>{{ video.date }}</span>
                             </div>
                         </div>
                     </div>
