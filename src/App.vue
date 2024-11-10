@@ -13,7 +13,7 @@ import { RouterLink, RouterView } from 'vue-router'
             </nav>
   </header>
   <main>
-    <nav id = "sidebar">
+    <nav id = "sidebar-main">
       <ul>
         <li><RouterLink to="/" class="sidebar-button"><img src="@/assets/img/WTUBE_home.svg"/>Главная страница</RouterLink></li>
         <li><RouterLink to="/shorts" class="sidebar-button"><img src="@/assets/img/WTUBE_shorts.svg"/>Шорты</RouterLink></li>
