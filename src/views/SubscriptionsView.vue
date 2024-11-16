@@ -36,13 +36,13 @@
 
 <template>
 
-        <div id = "content-main">
-            <section class="section-video">
-                <div class="video-list" v-for="video in videos">
-                    <Video :video></Video>
-                </div>
-            </section>
-        </div>
+    <div id = "content-main">
+        <section class="section-video">
+            <div class="video-list" v-for="video in videos">
+                <Video :video></Video>
+            </div>
+        </section>
+    </div>
 
 </template>
 

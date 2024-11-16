@@ -475,6 +475,32 @@ main{
     color:#ffffff;
 }
 
+
+#content-shorts .section-shorts{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#content-shorts .containter-short{
+    position: relative;
+    background-color: #737373;
+    margin: 0 500px 0 700px;
+
+}
+#content-shorts .channel-img-ref{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+#content-shorts .channel-img-ref img{
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+}
+
+
 footer{
     border-top: 1px solid #3c3c3c;
     padding: 1%;

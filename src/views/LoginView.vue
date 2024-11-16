@@ -1,13 +1,7 @@
-<script>
+<script setup>
     const login=''
     const password=''
     const signIn = (event) => {
-        if (login.length==0){
-            //
-        }
-        if (password.length==0){
-            //
-        }
         event.preventDefault()
     }
 </script>

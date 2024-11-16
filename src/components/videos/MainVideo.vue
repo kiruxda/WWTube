@@ -7,7 +7,7 @@
 <template >
     <article class="container-video">
         <RouterLink :to="{name: 'video-info', params: {id: video.id}}" class="thumbnail">
-            <img class="thumbnail-img" src="@/assets/img/rachel.jpg">
+            <img class="thumbnail-img" :src="video.thumbnail">
         </RouterLink>
         <div class="details-video">
             <RouterLink :to="{name: 'channel-info', params: {id: video.channel_url}}" class="channel-img-ref">
