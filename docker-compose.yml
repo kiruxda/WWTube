@@ -28,8 +28,8 @@ services:
     ports:
       - "8080:8080"
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: web_user
+      POSTGRES_PASSWORD: web123
       POSTGRES_DB: web
     volumes:
       - dbdata:/var/lib/postgresql
