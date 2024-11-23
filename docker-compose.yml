@@ -1,4 +1,3 @@
-version: '1.0'
 services:
 
   app:
@@ -11,11 +10,29 @@ services:
       - ./:/var/www
       - ./php/php.ini:/usr/local/etc/php/php.ini
     ports:
-      - '9000.9000'
+      - '9000:9000'
       
   webserver:
+    image: nginx:alpine
+    container_name: web-webserver
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
 
   db:
+    image: postgres:16
+    container_name: web-db
+    ports:
+      - "8080:8080"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: web
+    volumes:
+      - dbdata:/var/lib/postgresql
 
 volumes:
   dbdata:
