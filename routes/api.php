@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\ProductVideos;
-use Illuminate\Http\Request;
+use App\Http\Controllers\VideosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +16,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 */
-
-Route::get('videos', [\App\Http\Controllers\ProductVideos::class, 'list']);
-Route::get('videos/{id}', [\App\Http\Controllers\ProductVideos::class,'info']);
+Route::prefix('videos')->group(function () {
+    Route::get('', [VideosController::class, 'list']);
+    Route::get('{id}', [VideosController::class,'info']);
+    Route::post('', [VideosController::class,'create']);
+});

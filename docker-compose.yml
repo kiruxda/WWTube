@@ -23,16 +23,17 @@ services:
       - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
 
   db:
-    image: postgres:16
-    container_name: web-db
+    image: mysql:8
+    container_name: backend-db
     ports:
-      - "8080:8080"
+      - "3306:3306"
     environment:
-      POSTGRES_USER: web_user
-      POSTGRES_PASSWORD: web123
-      POSTGRES_DB: web
+      MYSQL_ROOT_PASSWORD: 'superpass321!'
+      MYSQL_DATABASE: 'web'
+      MYSQL_USER: 'web_user'
+      MYSQL_PASSWORD: 'web123!'
     volumes:
-      - dbdata:/var/lib/postgresql
+      - dbdata:/var/lib/mysql
 
 volumes:
   dbdata:
