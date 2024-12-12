@@ -9,10 +9,16 @@ class Video extends Model{
 
     protected $fillable = [
         "title",
-        "views"
+        "views",
+        'thumbnail',
+        'likes',
+        'dislikes',
     ];
 
     protected $casts = [
-        'views' => 'double',
+        'views' => 'integer',
     ];
+    public function profile() {
+        return $this->belongsTo('Profile'); 
+      }
 }

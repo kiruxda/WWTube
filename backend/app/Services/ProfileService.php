@@ -2,18 +2,18 @@
 
 namespace App\Services;
 
-use App\Models\Video;
+use App\Models\Profile;
 use Illuminate\Database\Eloquent\Collection;
 use \Illuminate\Database\Eloquent\Model;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-class VideosService{
+class ProfileService{
     /**
      * Получает список видео
      * @return Collection
      */
-    public function getVideos(){
-        return Video::query()
-            ->select("id","title",'views', 'thumbnail','likes','dislikes','profile_id')
+    public function getProfiles(){
+        return Profile::query()
+            ->select("id","username")
             ->orderBy('created_at','desc')
             ->get();
     }
@@ -23,13 +23,13 @@ class VideosService{
      * @param mixed $id
      * @return Model
      */
-    public function getVideoById($id){
-        $model = Video::query()
+    public function getProfileById($id){
+        $model = Profile::query()
             ->where('id','=',$id)
             ->first();
             
         if($model===null){
-            throw new NotFoundHttpException('Видео не найдено');
+            throw new NotFoundHttpException('профиль не найден');
         }
 
         return $model;
@@ -38,9 +38,9 @@ class VideosService{
     /**
      * Создает видео
      * @param array $data
-     * @return Model|Video
+     * @return Model|Profile
      */
-    public function createVideo(array $data){
-        return Video::create($data);
+    public function createProfile(array $data){
+        return Profile::create($data);
     }
 }

@@ -1,9 +1,12 @@
 <script setup>
-    import Video from '@/components/videos/MainVideo.vue';
-    const videos =[
+import Video from '@/components/videos/MainVideo.vue';
+//import axios from 'axios';
+//import {ref} from 'vue';
+
+    const videos_old =[
         {
             id:1,
-            name: 'малый эло',
+            title: 'малый эло',
             thumbnail: '@/assets/img/rachel.jpg',
             channel_name: 'кирюха',
             channel_url: 'kiruxda',
@@ -62,6 +65,13 @@
             date: '1 week ago'
         },
     ]
+const videos=ref([])
+const result = axios.get('videos')
+    .then((response)=>{
+        videos.value = response.data
+});
+result.catch();
+
 </script>
 <template>
         <div id = "content-main">

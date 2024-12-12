@@ -10,7 +10,7 @@
             <img class="thumbnail-img" src="@/assets/img/rachel.jpg">
         </RouterLink>
         <div class="details-video">
-                <RouterLink :to="{name:'video-info', params:{id: video.id}}" class="video-title-ref">{{ video.name }}</RouterLink>
+                <RouterLink :to="{name:'video-info', params:{id: video.id}}" class="video-title-ref">{{ video.title }}</RouterLink>
                 <div class="data-video">
                     <span>{{ video.views }}</span>
                     <span>{{ video.date }}</span>

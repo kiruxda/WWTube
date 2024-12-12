@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\VideosController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +21,9 @@ Route::prefix('videos')->group(function () {
     Route::get('', [VideosController::class, 'list']);
     Route::get('{id}', [VideosController::class,'info']);
     Route::post('', [VideosController::class,'create']);
+});
+Route::prefix('profile')->group(function () {
+    Route::get('', [ProfileController::class, 'list']);
+    Route::get('{id}', [ProfileController::class,'info']);
+    Route::post('', [ProfileController::class,'create']);
 });
